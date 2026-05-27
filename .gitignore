@@ -1,0 +1,31 @@
+# Java / build
+target/
+build/
+out/
+*.class
+*.jar
+*.war
+*.ear
+
+# IDE
+.idea/
+.vscode/
+*.iml
+
+# Local runtime data
+data/
+backups/
+reports/
+logs/
+license/
+config/local.*
+*.db
+*.sqlite
+*.sqlite3
+*.db-journal
+*.db-wal
+*.db-shm
+
+# OS
+.DS_Store
+Thumbs.db

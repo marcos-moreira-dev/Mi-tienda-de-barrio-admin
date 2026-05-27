@@ -1,0 +1,82 @@
+/*
+ * login.css
+ * -----------------------------------------------------------------------------
+ * Capa específica para login y loading.
+ * La imagen de supermercado funciona como fondo del panel azul; el texto y logo
+ * quedan por encima mediante StackPane desde LoginView.
+ */
+.login-root,
+.login-content {
+    -fx-background-color: white;
+    -fx-alignment: center;
+    -fx-fill-height: true;
+}
+
+.login-brand-wrapper {
+    -fx-background-color: #173546;
+    -fx-padding: 0;
+    -fx-alignment: center-left;
+}
+
+.login-brand-photo-background {
+    -fx-background-image: url("../assets/static/banner-login-cuadrado.png");
+    -fx-background-size: cover;
+    -fx-background-position: center center;
+    -fx-background-repeat: no-repeat;
+    -fx-opacity: 0.32;
+}
+
+.login-brand-tint { -fx-background-color: rgba(23, 53, 70, 0.78); }
+
+.login-brand-panel {
+    -fx-spacing: 18px;
+    -fx-alignment: center-left;
+    -fx-translate-y: 18px;
+}
+
+.login-brand-logo {
+    -fx-effect: dropshadow(gaussian, rgba(255,255,255,0.08), 12, 0.10, 0, 1);
+}
+.login-brand-name { -fx-font-size: 14px; -fx-font-weight: 800; -fx-text-fill: white; }
+.login-brand-title { -fx-font-size: 34px; -fx-font-weight: 900; -fx-text-fill: white; -fx-line-spacing: 2px; }
+.login-brand-helper { -fx-font-size: 14px; -fx-text-fill: #e4edf3; -fx-line-spacing: 3px; }
+.login-brand-footer { -fx-font-size: 12px; -fx-text-fill: #c8d7e1; }
+
+.login-form-shell {
+    -fx-background-color: white;
+    -fx-padding: 42px 54px;
+    -fx-alignment: center;
+}
+.login-form-panel { -fx-background-color: transparent; -fx-spacing: 16px; -fx-alignment: center-left; }
+.login-form-logo { -fx-opacity: 0; -fx-max-height: 0; -fx-fit-height: 0; }
+.login-form-title { -fx-font-size: 24px; -fx-font-weight: 900; -fx-text-fill: -app-primary-dark; }
+.login-form-subtitle,
+.login-support,
+.login-feedback { -fx-text-fill: -app-text-muted; }
+
+.login-credential-hint {
+    -fx-background-color: -app-primary-soft;
+    -fx-border-color: #c7dae6;
+    -fx-border-width: 1px;
+    -fx-background-radius: 6px;
+    -fx-border-radius: 6px;
+    -fx-padding: 10px 12px;
+    -fx-text-fill: -app-primary-dark;
+    -fx-font-weight: 700;
+}
+.login-feedback-error { -fx-text-fill: #b42318; -fx-font-weight: 800; }
+.login-feedback-success { -fx-text-fill: #067647; -fx-font-weight: 800; }
+.runtime-badge {
+    -fx-padding: 6px 10px;
+    -fx-background-color: -app-primary-soft;
+    -fx-background-radius: 999px;
+    -fx-text-fill: -app-primary-dark;
+    -fx-font-size: 11px;
+    -fx-font-weight: 900;
+}
+
+/* Loading: pequeño pulido visual para que no parezca una pantalla nativa vacía. */
+.loading-logo { -fx-effect: dropshadow(gaussian, rgba(20,32,54,0.08), 8, 0.05, 0, 2); }
+.loading-progress-bar { -fx-accent: -app-primary; }
+.loading-progress-bar > .bar { -fx-background-radius: 999px; }
+.loading-progress-bar > .track { -fx-background-color: -app-surface-3; -fx-background-radius: 999px; }

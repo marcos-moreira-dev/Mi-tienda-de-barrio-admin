@@ -1,0 +1,19 @@
+/*
+ * app.css
+ * -----------------------------------------------------------------------------
+ * Archivo de compatibilidad.
+ *
+ * Desde R7 la aplicación carga hojas por capas mediante ThemeStylesheets:
+ *   1) tokens.css
+ *   2) base.css
+ *   3) controls.css
+ *   4) components.css
+ *   5) login.css
+ *   6) shell.css
+ *   7) use-cases.css
+ *   8) modules.css
+ *
+ * Se conserva este archivo para que el repositorio mantenga una entrada conocida
+ * y para evitar confusión al revisar versiones anteriores. No agregues estilos
+ * nuevos aquí; ubícalos en la capa correspondiente.
+ */

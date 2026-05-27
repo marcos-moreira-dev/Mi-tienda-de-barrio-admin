@@ -1,0 +1,2 @@
+package com.marcosmoreira.mitiendadebarrio.admin.core.domain.fiado;
+public enum EstadoCuentaPorCobrar { ABIERTA("ABIERTA","Abierta"), CERRADA("CERRADA","Cerrada"), ANULADA("ANULADA","Anulada"); private final String dbValue; private final String label; EstadoCuentaPorCobrar(String dbValue,String label){this.dbValue=dbValue;this.label=label;} public String dbValue(){return dbValue;} public String label(){return label;} public static EstadoCuentaPorCobrar fromDb(String v){for(EstadoCuentaPorCobrar e:values()) if(e.dbValue.equals(v)) return e; return ABIERTA;} }

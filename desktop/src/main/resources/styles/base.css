@@ -1,0 +1,16 @@
+/*
+ * base.css
+ * -----------------------------------------------------------------------------
+ * Capa 2: reglas globales de escena y contenedores base.
+ * No debe contener estilos específicos de login, sidebar ni casos de uso.
+ */
+.screen-center {
+    -fx-padding: 34px;
+    -fx-background-color: linear-gradient(to bottom right, #f5f8fb, #e9f0f5);
+}
+
+.scroll-pane,
+.scroll-pane > .viewport {
+    -fx-background-color: transparent;
+    -fx-background: transparent;
+}

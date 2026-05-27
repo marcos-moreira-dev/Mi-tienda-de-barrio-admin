@@ -1,0 +1,45 @@
+/*
+ * tokens.css
+ * -----------------------------------------------------------------------------
+ * Capa 1: variables visuales del producto.
+ *
+ * Esta hoja concentra colores, superficies, sombras y tipografía base. Las demás
+ * hojas deben consumir estos tokens en vez de hardcodear valores nuevos. Si se
+ * cambia la identidad visual de Mi tienda de barrio admin, este debe ser el
+ * primer archivo a revisar.
+ */
+.root {
+    -app-bg: #f3f6f8;
+    -app-surface: #ffffff;
+    -app-surface-2: #f8fafc;
+    -app-surface-3: #eef3f7;
+    -app-border: #d8e0e7;
+    -app-border-strong: #b9c5cf;
+    -app-text: #17212b;
+    -app-text-muted: #516172;
+    -app-text-soft: #6b7a8a;
+    -app-primary: #2b5b6e;
+    -app-primary-dark: #183446;
+    -app-primary-soft: #e5eff5;
+    -app-sidebar: #173244;
+    -app-sidebar-hover: #21485c;
+    -app-sidebar-active: #2b5b6e;
+    -app-on-sidebar: #d9e6ee;
+    -app-success-soft: #e7f3ea;
+    -app-success-text: #2f6b45;
+    -app-danger-soft: #f8ebeb;
+    -app-danger-text: #8d2f2f;
+    -app-warning-soft: #fff3da;
+    -app-warning-text: #8a5c0f;
+    -app-shadow-soft: dropshadow(gaussian, rgba(20, 32, 54, 0.08), 12, 0.08, 0, 3);
+
+    -fx-font-family: "Segoe UI", "Inter", Arial, sans-serif;
+    -fx-font-size: 13px;
+    -fx-background-color: -app-bg;
+    -fx-text-fill: -app-text;
+}
+
+/* Textos globales: se mantienen sobrios para no contaminar módulos concretos. */
+.label { -fx-text-fill: -app-text; }
+.muted-text { -fx-text-fill: -app-text-muted; -fx-wrap-text: true; }
+.separator *.line { -fx-border-color: -app-border; }

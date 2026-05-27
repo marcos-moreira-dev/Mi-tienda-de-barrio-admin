@@ -1,0 +1,2 @@
+package com.marcosmoreira.mitiendadebarrio.admin.core.domain.fiado;
+public enum EstadoClienteFiado { ACTIVO("ACTIVO","Activo"), INACTIVO("INACTIVO","Inactivo"); private final String dbValue; private final String label; EstadoClienteFiado(String dbValue,String label){this.dbValue=dbValue;this.label=label;} public String dbValue(){return dbValue;} public String label(){return label;} public static EstadoClienteFiado fromDb(String v){for(EstadoClienteFiado e:values()) if(e.dbValue.equals(v)) return e; return ACTIVO;} }

@@ -1,0 +1,7 @@
+/*
+ * modules.css
+ * -----------------------------------------------------------------------------
+ * Ajustes de pantallas de negocio. Por ahora se mantiene liviano porque R6 ya
+ * separó formularios/listados; futuros módulos deben crecer aquí, no en app.css.
+ */
+/* Reservado para afinamientos específicos de Productos, Compras, Salidas, Caja y Fiado. */

@@ -1,0 +1,174 @@
+/*
+ * shell.css
+ * -----------------------------------------------------------------------------
+ * Capa de marco principal: MenuBar, TopBar, Sidebar, workspace y StatusBar.
+ * Este archivo debe conservar el patrón visual de Marcos Moreira Sistema: sidebar
+ * sobrio, footer claro con cerrar sesión, y modo colapsado limpio.
+ */
+.main-shell,
+.shell-root,
+.shell-frame,
+.workspace-host { -fx-background-color: -app-bg; }
+
+.shell-top-region { -fx-background-color: white; }
+.shell-menubar {
+    -fx-background-color: #ffffff;
+    -fx-border-color: transparent transparent #dbe4ec transparent;
+    -fx-border-width: 0 0 1px 0;
+    -fx-padding: 2px 8px;
+}
+.shell-menubar .label { -fx-text-fill: #0b2638; -fx-font-size: 12px; }
+
+.shell-topbar {
+    -fx-background-color: -app-surface;
+    -fx-padding: 14px 22px;
+    -fx-border-color: transparent transparent -app-border transparent;
+    -fx-border-width: 0 0 1px 0;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.04), 5, 0.0, 0, 2);
+    -fx-alignment: center-left;
+}
+.shell-title { -fx-font-size: 20px; -fx-font-weight: 900; -fx-text-fill: -app-primary-dark; }
+.shell-subtitle,
+.shell-session,
+.statusbar-detail { -fx-text-fill: -app-text-muted; }
+.shell-subtitle { -fx-font-size: 12px; }
+.shell-topbar-actions { -fx-alignment: center-right; -fx-spacing: 10px; }
+
+.shell-statusbar {
+    -fx-background-color: -app-surface;
+    -fx-border-color: -app-border transparent transparent transparent;
+    -fx-border-width: 1px 0 0 0;
+    -fx-padding: 8px 18px;
+    -fx-alignment: center-left;
+}
+.statusbar-message { -fx-font-weight: 800; -fx-text-fill: -app-primary-dark; }
+.statusbar-detail { -fx-font-size: 12px; }
+
+.workspace,
+.workspace-host {
+    -fx-padding: 20px;
+    -fx-background-color: -app-bg;
+}
+.workspace-card-shell { -fx-background-color: transparent; -fx-padding: 2px; }
+.workspace-scroll { -fx-fit-to-width: true; -fx-background-color: transparent; }
+.workspace-scroll > .viewport { -fx-background-color: transparent; }
+
+.shell-sidebar-frame {
+    -fx-background-color: -app-sidebar;
+    -fx-pref-width: 320px;
+    -fx-min-width: 320px;
+    -fx-max-width: 320px;
+    -fx-border-color: transparent #122a3a transparent transparent;
+    -fx-border-width: 0 1px 0 0;
+}
+.shell-sidebar {
+    -fx-background-color: -app-sidebar;
+    -fx-padding: 18px 14px;
+    -fx-spacing: 6px;
+}
+.shell-sidebar-scroll { -fx-hbar-policy: never; }
+
+.sidebar-brand-row { -fx-padding: 2px 0 10px 0; -fx-spacing: 10px; -fx-alignment: center-left; }
+.sidebar-brand-copy { -fx-spacing: 2px; }
+.sidebar-brand-icon { -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.16), 8, 0.10, 0, 2); }
+.sidebar-brand {
+    -fx-font-size: 18px;
+    -fx-font-weight: 900;
+    -fx-text-fill: white;
+    -fx-wrap-text: true;
+}
+.sidebar-helper { -fx-font-size: 12px; -fx-text-fill: #bdd1dc; -fx-wrap-text: true; }
+.sidebar-group-label {
+    -fx-padding: 14px 8px 5px 8px;
+    -fx-font-size: 10px;
+    -fx-font-weight: 900;
+    -fx-text-fill: #a9c1ce;
+}
+
+.sidebar-collapse-button,
+.sidebar-utility-button {
+    -fx-background-color: transparent;
+    -fx-border-color: #345b6e;
+    -fx-border-width: 1px;
+    -fx-border-radius: 0px;
+    -fx-background-radius: 0px;
+    -fx-text-fill: white;
+    -fx-font-size: 13px;
+    -fx-font-weight: 800;
+    -fx-min-width: 40px;
+    -fx-min-height: 40px;
+    -fx-padding: 7px 10px;
+}
+.sidebar-collapse-button:hover,
+.sidebar-utility-button:hover {
+    -fx-background-color: -app-sidebar-hover;
+    -fx-border-color: -app-sidebar-hover;
+}
+
+.sidebar-module-button {
+    -fx-alignment: center-left;
+    -fx-text-fill: -app-on-sidebar;
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-padding: 10px 12px;
+    -fx-min-height: 44px;
+    -fx-background-radius: 6px;
+    -fx-border-radius: 6px;
+    -fx-font-size: 13px;
+    -fx-font-weight: 800;
+    -fx-cursor: hand;
+    -fx-graphic-text-gap: 10px;
+}
+.sidebar-module-button:hover { -fx-background-color: -app-sidebar-hover; -fx-text-fill: white; }
+.sidebar-module-button-active { -fx-background-color: -app-sidebar-active; -fx-text-fill: white; }
+.sidebar-module-button .label { -fx-text-fill: inherit; }
+.sidebar-module-icon { -fx-opacity: 0.92; }
+.sidebar-module-fallback-icon { -fx-text-fill: white; -fx-font-size: 14px; -fx-font-weight: 900; }
+
+.shell-sidebar-footer,
+.sidebar-footer {
+    -fx-background-color: -app-sidebar;
+    -fx-border-color: -app-sidebar-hover transparent transparent transparent;
+    -fx-border-width: 1px 0 0 0;
+    -fx-padding: 12px 18px 18px 18px;
+    -fx-spacing: 8px;
+}
+.sidebar-footer-label { -fx-text-fill: #bdd1dc; -fx-font-size: 11px; }
+.sidebar-logout-button {
+    -fx-background-color: #162a39;
+    -fx-border-color: #162a39;
+    -fx-text-fill: white;
+    -fx-min-height: 42px;
+    -fx-font-weight: 900;
+    -fx-background-radius: 0;
+    -fx-border-radius: 0;
+}
+.sidebar-logout-button:hover { -fx-background-color: #3c8fc7; -fx-border-color: #3c8fc7; -fx-text-fill: white; }
+
+/* Modo colapsado: mantiene el botón visible y centra iconos. */
+.shell-sidebar-frame.shell-sidebar-frame-collapsed,
+.shell-sidebar-frame-collapsed {
+    -fx-pref-width: 104px;
+    -fx-min-width: 104px;
+    -fx-max-width: 104px;
+}
+.shell-sidebar-frame-collapsed .shell-sidebar { -fx-padding: 12px 10px; -fx-spacing: 8px; }
+.shell-sidebar-frame-collapsed .sidebar-brand-row { -fx-padding: 2px 0 10px 0; -fx-spacing: 8px; -fx-alignment: center; }
+.shell-sidebar-frame-collapsed .sidebar-brand-icon { -fx-fit-width: 34px; -fx-fit-height: 34px; }
+.shell-sidebar-frame-collapsed .sidebar-collapse-button { -fx-min-width: 40px; -fx-max-width: 40px; -fx-min-height: 40px; -fx-padding: 6px 10px; }
+.sidebar-module-button-collapsed {
+    -fx-min-width: 68px;
+    -fx-pref-width: 68px;
+    -fx-min-height: 54px;
+    -fx-padding: 0;
+    -fx-alignment: center;
+    -fx-graphic-text-gap: 0;
+}
+.sidebar-module-button-collapsed .label { -fx-opacity: 0; }
+.sidebar-footer-button-collapsed {
+    -fx-min-width: 64px;
+    -fx-max-width: 64px;
+    -fx-min-height: 50px;
+    -fx-alignment: center;
+    -fx-padding: 0;
+}

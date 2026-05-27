@@ -1,0 +1,108 @@
+/*
+ * controls.css
+ * -----------------------------------------------------------------------------
+ * Normalización de controles JavaFX nativos. Aquí viven TextField, TableView,
+ * ListView, ScrollBar, TabPane, CheckBox, ComboBox y DatePicker.
+ */
+.text-field,
+.password-field,
+.text-area,
+.combo-box,
+.date-picker {
+    -fx-background-radius: 4px;
+    -fx-border-radius: 4px;
+    -fx-border-color: -app-border;
+    -fx-border-width: 1px;
+    -fx-background-color: -app-surface;
+    -fx-padding: 8px 10px;
+    -fx-text-fill: -app-text;
+}
+.text-field:focused,
+.password-field:focused,
+.text-area:focused,
+.combo-box:focused,
+.date-picker:focused { -fx-border-color: -app-primary; }
+.combo-box .list-cell { -fx-text-fill: -app-text; }
+
+.check-box { -fx-text-fill: #0b2638; -fx-font-size: 13px; }
+.check-box .text { -fx-fill: #0b2638; }
+.check-box .box {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #b9c8d4;
+    -fx-border-width: 1px;
+    -fx-border-radius: 4px;
+    -fx-background-radius: 4px;
+    -fx-padding: 3px;
+}
+.check-box:selected .box { -fx-background-color: #138fa0; -fx-border-color: #138fa0; }
+.check-box:selected .mark { -fx-background-color: #ffffff; }
+.check-box:focused .box { -fx-border-color: #0a6d83; -fx-effect: dropshadow(gaussian, rgba(19,143,160,0.20), 5, 0.15, 0, 0); }
+
+.table-view {
+    -fx-background-color: -app-surface;
+    -fx-border-color: -app-border;
+    -fx-border-width: 1px;
+    -fx-background-radius: 4px;
+    -fx-border-radius: 4px;
+}
+.table-view .column-header-background { -fx-background-color: -app-surface-2; }
+.table-view .column-header,
+.table-view .filler { -fx-background-color: transparent; -fx-border-color: transparent transparent -app-border transparent; }
+.table-view .table-cell { -fx-padding: 9px 10px; -fx-border-color: transparent transparent #edf1f5 transparent; }
+
+.tab-pane { -fx-background-color: transparent; }
+.tab-pane > .tab-header-area > .tab-header-background { -fx-background-color: transparent; }
+.tab-pane .tab {
+    -fx-background-color: -app-surface-3;
+    -fx-border-color: -app-border;
+    -fx-border-width: 1px;
+    -fx-background-radius: 4px 4px 0 0;
+    -fx-border-radius: 4px 4px 0 0;
+    -fx-padding: 8px 12px;
+}
+.tab-pane .tab:selected { -fx-background-color: -app-surface; -fx-border-color: -app-primary; }
+
+.scroll-pane .scroll-bar:horizontal,
+.scroll-pane .scroll-bar:vertical,
+.table-view .scroll-bar:horizontal,
+.table-view .scroll-bar:vertical {
+    -fx-background-color: transparent;
+    -fx-padding: 2px;
+}
+.scroll-pane .scroll-bar:vertical,
+.table-view .scroll-bar:vertical { -fx-pref-width: 10px; }
+.scroll-pane .scroll-bar:horizontal,
+.table-view .scroll-bar:horizontal { -fx-pref-height: 10px; }
+.scroll-pane .scroll-bar:horizontal .track,
+.scroll-pane .scroll-bar:vertical .track,
+.table-view .scroll-bar:horizontal .track,
+.table-view .scroll-bar:vertical .track {
+    -fx-background-color: -app-surface-3;
+    -fx-background-radius: 999px;
+}
+.shell-sidebar-scroll .scroll-bar:vertical .track { -fx-background-color: rgba(255,255,255,0.10); }
+.scroll-pane .scroll-bar:horizontal .thumb,
+.scroll-pane .scroll-bar:vertical .thumb,
+.table-view .scroll-bar .thumb {
+    -fx-background-color: -app-primary;
+    -fx-background-radius: 999px;
+}
+.shell-sidebar-scroll .scroll-bar:vertical .thumb { -fx-background-color: #b8d4e2; }
+.scroll-pane .scroll-bar:horizontal .thumb:hover,
+.scroll-pane .scroll-bar:vertical .thumb:hover,
+.table-view .scroll-bar .thumb:hover { -fx-background-color: -app-primary-dark; }
+.scroll-pane .scroll-bar .increment-button,
+.scroll-pane .scroll-bar .decrement-button,
+.table-view .scroll-bar .increment-button,
+.table-view .scroll-bar .decrement-button {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-padding: 0px 2px 0px 2px;
+}
+.scroll-pane .scroll-bar .increment-arrow,
+.scroll-pane .scroll-bar .decrement-arrow,
+.table-view .scroll-bar .increment-arrow,
+.table-view .scroll-bar .decrement-arrow {
+    -fx-background-color: -app-text-soft;
+    -fx-padding: 0.15em;
+}

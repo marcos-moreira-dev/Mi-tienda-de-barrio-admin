@@ -1,0 +1,3 @@
+package com.marcosmoreira.mitiendadebarrio.admin.core.application.fiado;
+import com.marcosmoreira.mitiendadebarrio.admin.core.domain.caja.MetodoPagoCaja; import com.marcosmoreira.mitiendadebarrio.admin.core.domain.fiado.*; import java.math.BigDecimal; import java.util.List;
+public interface FiadoRepository { List<ClienteFiado> findClientes(String query, boolean incluirInactivos); ClienteFiado guardarCliente(ClienteFiado cliente); void cambiarEstadoCliente(Long clienteId, boolean activo); List<CuentaPorCobrar> findCuentasAbiertas(Long clienteId); CuentaPorCobrar abrirCuenta(Long clienteId, BigDecimal monto, String observacion); Abono registrarAbono(Long cuentaId, BigDecimal monto, MetodoPagoCaja metodoPago, String observacion); }
